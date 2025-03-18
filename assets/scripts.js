@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Navigation Toggle
+
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         this.classList.toggle('active');
     });
 
-    // Close mobile menu when clicking links
+
     const navItems = document.querySelectorAll('.nav-links a');
     navItems.forEach(item => {
         item.addEventListener('click', () => {
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Navbar scroll effect
+
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Project cards hover effect
+
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Function to get different colors for different projects
     function getProjectColor(project) {
         const colors = {
             'islam': '#27ae60',
@@ -58,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
 
 
-    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -69,10 +67,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add scroll animations
+
     const fadeElements = document.querySelectorAll('.section-title, .about-content, .project-card, .skills-content, .why-fac-content, .contact-content');
     
-    // Create observer
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -84,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
         threshold: 0.1
     });
     
-    // Observe elements
+
     fadeElements.forEach(element => {
         observer.observe(element);
         element.style.opacity = '0';
@@ -92,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
         element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     });
     
-    // Add the CSS for the fade-in animation
+
     const style = document.createElement('style');
     style.textContent = `
         .fade-in {
@@ -102,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 
-    // Progress bar animation for skills (optional)
+
     const skillBars = document.querySelectorAll('.skill-bar');
     
     if (skillBars.length > 0) {
@@ -124,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Project details modal (if needed)
+
     const projectDetails = {
         'islam': {
             title: 'HelpingWithIslam.com',
@@ -152,6 +150,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // You could add code here to show detailed project information when clicking on cards
-    // This would require adding modal HTML to your index.html file
+
 });
