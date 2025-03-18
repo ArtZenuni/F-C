@@ -251,6 +251,12 @@ a {
     box-shadow: var(--shadow);
 }
 
+.repo {
+    text-align: center;
+    color: #2980b9;
+    font-weight: bold;
+}
+
 .image-placeholder img {
     width: 250px;
     border-radius: 100%;
