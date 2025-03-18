@@ -49,49 +49,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const colors = {
             'islam': '#27ae60',
             'wix': '#e67e22',
-            'construction': '#f39c12',
-            'salon': '#d35400'
+            'construction': '#2262ce',
+            'salon': 'hsl(37.59deg 100% 69.02%)'
         };
         
         return colors[project] || '#3498db';
     }
+        
 
-    // Form submission
-    const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        
-        // Here you would normally send this data to your server
-        // For now, we'll just show a success message
-        
-        // Create success message
-        const successMessage = document.createElement('div');
-        successMessage.className = 'success-message';
-        successMessage.innerHTML = `
-            <p>Thanks for your message, ${name}! I'll get back to you soon.</p>
-        `;
-        successMessage.style.backgroundColor = '#2ecc71';
-        successMessage.style.color = 'white';
-        successMessage.style.padding = '15px';
-        successMessage.style.borderRadius = '4px';
-        successMessage.style.marginTop = '20px';
-        
-        // Add success message to the form
-        contactForm.appendChild(successMessage);
-        
-        // Reset form
-        contactForm.reset();
-        
-        // Remove success message after 5 seconds
-        setTimeout(() => {
-            successMessage.remove();
-        }, 5000);
-    });
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

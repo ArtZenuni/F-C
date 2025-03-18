@@ -241,6 +241,11 @@ a {
     box-shadow: var(--shadow);
 }
 
+.image-placeholder img {
+    width: 250px;
+    border-radius: 100%;
+}
+
 .image-placeholder i {
     font-size: 5rem;
     color: var(--text-light);
@@ -253,9 +258,10 @@ a {
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .project-card {
@@ -265,6 +271,8 @@ a {
     padding: 20px;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    width: 32%;
+    min-width: 290px;
 }
 
 .project-card:hover {
