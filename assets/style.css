@@ -169,7 +169,9 @@ a {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('/api/placeholder/1200/800') no-repeat center center/cover;
+    background-image:  url('./stock-photo-modern-laptop-green-plant-blue-background.jpeg');
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     text-align: center;
@@ -180,25 +182,32 @@ a {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 15px;
-    color: white;
+    color: rgb(192, 192, 192);
 }
 
 .hero-content h2 {
     font-size: 2rem;
     font-weight: 400;
     margin-bottom: 20px;
-    color: var(--light);
+    color: rgb(192, 192, 192);
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 30px;
+    color: rgb(110, 173, 255);
 }
 
 .cta-buttons {
